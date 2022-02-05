@@ -1,0 +1,9 @@
+{#
+    Generate a table with all events (title) and the backstage rooms for each event and the room they are in.
+    :param events
+#}
+| Event         | Room          | Event backstage | Room backstage | Room front stage |
+| ------------- | ------------- | --------------- | -------------- | ---------------- |
+{% for event in events -%}
+| {{ event.name }} | {{ event.room }} | {{ event.backstage }} | {{ event.audience_backstage }} | {{ event.audience }} |
+{% endfor -%}
